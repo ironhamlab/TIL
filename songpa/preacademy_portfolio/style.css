@@ -1,0 +1,149 @@
+* {
+    /* CSS 초기화 */
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+/* 전역 스타일링 */
+body {
+    font-family: "Noto Serif KR", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #afd2f5;
+}
+
+header {
+    background-color: #ff9169;
+    color: #f8f9fa;
+    padding: 20px 0;
+    border-bottom: 2px solid #eee;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    padding-bottom: 100px;
+}
+
+.profile-section {
+    flex: 1;
+    background-color: aliceblue;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    /* X축, Y축, 번짐 정도, 색상 */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    transition: all 0.3s ease;
+}
+
+.profile-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(170, 28, 28, 0.1);
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 8px solid #ffe6dd;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1) rotate(5deg);
+    border-color: #ff9169;
+}
+
+.profile-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: #999;
+    font-weight: bold;
+}
+
+.info-section {
+    flex: 2;
+}
+
+.keyword-box {
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    border-left: 6px solid #ffe6dd;
+    transition: all 0.3s ease;
+}
+
+.keyword-box:hover {
+    transform: scale(1.03) translateX(10px);
+    background-color: white;
+    border-left: 6px solid #ff9169;
+    border-left-width: 12px;
+    box-shadow: 0 10px 20px rgba(158, 211, 243, 0.2);
+    cursor: pointer;
+}
+
+.keyword-box h2 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.keyword-box:hover h2 {
+    color: royalblue;
+}
+
+.link-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.link-section a {
+    background-color: royalblue;
+    font-size: 1.2rem;
+    color: aliceblue;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #aaa;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* flex를 적용한 부모요소 안에 든 자식들을 가운데로 몰 때
+    align-items: center;
+*/
